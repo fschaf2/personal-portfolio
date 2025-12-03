@@ -21,7 +21,7 @@ export default function NavBar() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/75 border-b border-purple-100/70 shadow-[0_10px_35px_-20px_rgba(64,14,130,0.45)]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-8 bg-gradient-to-r from-transparent via-[#d8c7ff]/60 to-transparent blur-xl" />
-      <div className="relative max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="relative max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-center gap-3">
           <div className="h-11 w-11 rounded-xl bg-[#2f1b52] shadow-lg shadow-purple-200/70 flex items-center justify-center text-white font-semibold tracking-tight">
             FS
@@ -31,7 +31,7 @@ export default function NavBar() {
           </div>
         </div>
 
-        <nav className="flex items-center gap-3 text-sm md:text-base">
+        <nav className="flex flex-wrap items-center justify-start sm:justify-end gap-2 sm:gap-3 text-sm md:text-base overflow-x-auto whitespace-nowrap">
           {links.map((link) => {
             const active = isActive(link.href);
             return (
