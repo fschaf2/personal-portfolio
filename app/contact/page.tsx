@@ -55,56 +55,59 @@ export default function ContactPage() {
         </header>
 
         <div className="rounded-2xl bg-white/85 backdrop-blur p-6 shadow-lg shadow-purple-200/50 ring-1 ring-purple-100">
-          <form className="space-y-5" onSubmit={handleSubmit}>
-            <div className="grid gap-4 md:grid-cols-2">
-              <label className="space-y-2 text-sm font-medium text-slate-800">
+          {/* Increased space-y-5 to space-y-6 for better separation between groups */}
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            <div className="grid gap-6 md:grid-cols-2">
+              {/* FIX: Changed to flex-col and gap-2. Removed mt-1 from input */}
+              <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
                 Name
                 <input
-                type="text"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-                required
-                className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
-              />
-            </label>
-            <label className="space-y-2 text-sm font-medium text-slate-800">
-              Email
+                  type="text"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+                  required
+                  className="w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
+                />
+              </label>
+              
+              <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
+                Email
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                  required
+                  className="w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
+                />
+              </label>
+            </div>
+
+            <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
+              Project/Idea
               <input
-                type="email"
-                placeholder="you@example.com"
-                value={formData.email}
-                onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-                required
-                className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
+                type="text"
+                placeholder="Your Fabulous Idea"
+                value={formData.project}
+                onChange={(e) => setFormData((prev) => ({ ...prev, project: e.target.value }))}
+                className="w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
               />
             </label>
-          </div>
 
-          <label className="space-y-2 text-sm font-medium text-slate-800">
-            Project/Idea
-            <input
-              type="text"
-              placeholder="Your Fabulous Idea"
-              value={formData.project}
-              onChange={(e) => setFormData((prev) => ({ ...prev, project: e.target.value }))}
-              className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
-            />
-          </label>
+            <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
+              Message
+              <textarea
+                rows={5}
+                placeholder="Enter Your Message"
+                value={formData.message}
+                onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+                required
+                className="w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
+              />
+            </label>
 
-          <label className="space-y-2 text-sm font-medium text-slate-800">
-            Message
-            <textarea
-              rows={5}
-              placeholder="Enter Your Message"
-              value={formData.message}
-              onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
-              required
-              className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
-            />
-          </label>
-
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2">
               <p className="text-sm text-slate-600">
                 I reply within 1 business day. Prefer email? Ping{" "}
                 <a href="mailto:felixrobertschafer@gmail.com" className="font-semibold text-[#4c1d95]">
@@ -119,6 +122,7 @@ export default function ContactPage() {
                 {status === "submitting" ? "Sending…" : "Send message"} <span aria-hidden>→</span>
               </button>
             </div>
+            
             {status === "success" && (
               <p className="text-sm text-green-700 bg-green-50 border border-green-100 rounded-xl px-4 py-3">
                 Thanks! Your message has been sent.
