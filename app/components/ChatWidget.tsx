@@ -160,12 +160,12 @@ export default function ChatWidget() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask about projects or tech..."
-                className="flex-1 rounded-xl border border-purple-100 bg-white px-3 py-2 text-sm outline-none ring-0 focus:border-[#7c3aed]"
+                className="flex-1 rounded-xl border border-purple-100 bg-white px-3 py-2 text-base outline-none ring-0 focus:border-[#7c3aed]"
               />
               <button
                 type="submit"
                 disabled={loading || !input.trim()}
-                className="inline-flex items-center gap-2 rounded-xl bg-[#2f1b52] px-3 py-2 text-sm font-semibold text-white shadow-md transition hover:-translate-y-[1px] disabled:opacity-50"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#2f1b52] px-3 py-2 text-base font-semibold text-white shadow-md transition hover:-translate-y-[1px] disabled:opacity-50"
               >
                 Send
               </button>
