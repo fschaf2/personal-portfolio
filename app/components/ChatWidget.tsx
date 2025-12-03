@@ -13,8 +13,12 @@ const formatMessage = (text: string) => {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
   const withBold = escaped.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  const withLinks = withBold.replace(
+    /(https?:\/\/[^\s<]+)|(mailto:[^\s<]+)/g,
+    (match) => `<a href="${match}" target="_blank" rel="noreferrer" class="text-[#2f1b52] underline underline-offset-2">${match}</a>`
+  );
 
-  const lines = withBold.split(/\r?\n/);
+  const lines = withLinks.split(/\r?\n/);
   let inList = false;
   const chunks: string[] = [];
 
