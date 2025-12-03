@@ -31,7 +31,7 @@ export default function NavBar() {
           </div>
         </div>
 
-        <nav className="flex flex-wrap items-center justify-start sm:justify-end gap-2 sm:gap-3 text-sm md:text-base overflow-x-auto whitespace-nowrap">
+        <nav className="flex flex-wrap items-center justify-center sm:justify-end gap-2 sm:gap-3 text-sm md:text-base overflow-x-auto whitespace-nowrap">
           {links.map((link) => {
             const active = isActive(link.href);
             return (
