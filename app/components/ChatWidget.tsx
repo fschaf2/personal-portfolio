@@ -31,8 +31,9 @@ const formatMessage = (text: string) => {
     .join("");
 
   const withBold = linkifiedSegments.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  const withItalics = withBold.replace(/(^|[^*])\*(?!\s)([^*]+?)\*(?!\w)/g, "$1<em>$2</em>");
 
-  const lines = withBold.split(/\r?\n/);
+  const lines = withItalics.split(/\r?\n/);
   let inList = false;
   const chunks: string[] = [];
 
