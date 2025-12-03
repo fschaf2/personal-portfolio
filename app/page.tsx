@@ -68,19 +68,20 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-4 text-sm text-slate-700 justify-items-center">
-              <div className="rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-purple-100">
-                <p className="text-xs text-slate-500">Right now</p>
-                <p className="font-semibold">LSU CS senior '26 · Software Engineering concentration</p>
-              </div>
-              <div className="rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-purple-100">
-                <p className="text-xs text-slate-500">Projects</p>
-                <p className="font-semibold">LaCulture · BrainScan AI · LSU Datastore · Digit Classifier</p>
-              </div>
-              <div className="rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-purple-100">
-                <p className="text-xs text-slate-500">Stack</p>
-                <p className="font-semibold">Python · PyTorch · Angular · React/Next · SQL</p>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4 text-sm text-slate-700 justify-items-center">
+            <div className="rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-purple-100">
+              <p className="text-xs text-slate-500">Right now</p>
+              <p className="font-semibold">LSU CS senior '26 · Software Engineering concentration</p>
+            </div>
+          
+            <div className="rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-purple-100">
+              <p className="text-xs text-slate-500">Projects</p>
+              <p className="font-semibold">LaCulture · BrainScan AI · LSU Datastore · Digit Classifier</p>
+            </div>
+          
+            <div className="rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-purple-100">
+              <p className="text-xs text-slate-500">Stack</p>
+              <p className="font-semibold">Python · PyTorch · Angular · React/Next · SQL</p>
             </div>
           </div>
 
