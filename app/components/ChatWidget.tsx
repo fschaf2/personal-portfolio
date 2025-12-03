@@ -12,7 +12,38 @@ const formatMessage = (text: string) => {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
-  return escaped.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  const withBold = escaped.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+
+  const lines = withBold.split(/\r?\n/);
+  let inList = false;
+  const chunks: string[] = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    const bulletMatch = /^[-*]\s+(.+)$/.exec(trimmed);
+
+    if (bulletMatch) {
+      if (!inList) {
+        chunks.push('<ul class="list-disc pl-5 space-y-1">');
+        inList = true;
+      }
+      chunks.push(`<li>${bulletMatch[1]}</li>`);
+    } else {
+      if (inList) {
+        chunks.push("</ul>");
+        inList = false;
+      }
+      if (trimmed.length > 0) {
+        chunks.push(`<p>${trimmed}</p>`);
+      }
+    }
+  }
+
+  if (inList) {
+    chunks.push("</ul>");
+  }
+
+  return chunks.join("");
 };
 
 const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
