@@ -31,11 +31,6 @@ export default function NavBar() {
           </div>
         </div>
 
-        {/* FIX APPLIED:
-           1. 'py-4': Adds 16px of padding to top/bottom. This is enough space for the shadow-lg to render without clipping.
-           2. '-my-4': Adds negative margin to cancel out the height increase, so the header doesn't get taller visually.
-           3. 'px-1 -mx-1': Keeps the horizontal alignment flush.
-        */}
         <nav className="flex flex-nowrap items-center justify-start sm:justify-end gap-2 sm:gap-3 text-sm md:text-base overflow-x-auto py-4 px-1 -my-4 -mx-1 scrollbar-hide">
           {links.map((link) => {
             const active = isActive(link.href);
@@ -43,7 +38,7 @@ export default function NavBar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`group relative overflow-hidden rounded-full px-4 py-2 font-medium tracking-tight transition-all duration-300 ease-out active:scale-[0.97] whitespace-nowrap ${
+                className={`shrink-0 group relative overflow-hidden rounded-full px-4 py-2 font-medium tracking-tight transition-all duration-300 ease-out active:scale-[0.97] whitespace-nowrap ${
                   active
                     ? "bg-[#2f1b52] text-white shadow-md shadow-purple-200/70"
                     : "bg-white/70 text-slate-800 ring-1 ring-purple-100/70 hover:-translate-y-[2px] hover:shadow-lg hover:shadow-purple-200/70"
