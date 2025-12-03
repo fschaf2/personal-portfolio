@@ -55,10 +55,8 @@ export default function ContactPage() {
         </header>
 
         <div className="rounded-2xl bg-white/85 backdrop-blur p-6 shadow-lg shadow-purple-200/50 ring-1 ring-purple-100">
-          {/* Increased space-y-5 to space-y-6 for better separation between groups */}
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid gap-6 md:grid-cols-2">
-              {/* FIX: Changed to flex-col and gap-2. Removed mt-1 from input */}
               <label className="flex flex-col gap-2 text-sm font-medium text-slate-800">
                 Name
                 <input
