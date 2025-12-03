@@ -11,7 +11,7 @@ export default function HomePage() {
     },
     {
       title: "AI Digit Classifier",
-      badge: "AI/ML, NumPy",
+      badge: "AI/ML, Data Analysis",
       summary:
         "MNIST digit classifier exploring five AI methods, with a CNN surpassing 99% accuracy plus confusion matrices and probability maps.",
       tech: "Python · PyTorch · Scikit-learn · Numpy",
