@@ -38,7 +38,7 @@ export default function NavBar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`shrink-0 group relative overflow-hidden rounded-full px-4 py-2 font-medium tracking-tight transition-all duration-300 ease-out active:scale-[0.97] whitespace-nowrap ${
+                className={`group relative overflow-hidden rounded-full px-4 py-2 font-medium tracking-tight transition-all duration-300 ease-out active:scale-[0.97] whitespace-nowrap ${
                   active
                     ? "bg-[#2f1b52] text-white shadow-md shadow-purple-200/70"
                     : "bg-white/70 text-slate-800 ring-1 ring-purple-100/70 hover:-translate-y-[2px] hover:shadow-lg hover:shadow-purple-200/70"
@@ -47,11 +47,6 @@ export default function NavBar() {
               >
                 <span className="relative z-10 flex items-center gap-2">
                   {link.label}
-                  <span
-                    className={`h-[3px] w-2 rounded-full transition-all duration-300 ${
-                      active ? "bg-white/80 w-4" : "bg-[#c7b5ff] group-hover:w-4"
-                    }`}
-                  />
                 </span>
                 <span className="absolute inset-0 -z-0 bg-gradient-to-r from-[#f6c344]/70 via-[#7c3aed]/30 to-[#2f1b52]/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <span className="absolute inset-x-0 -bottom-[1px] h-0.5 bg-gradient-to-r from-transparent via-[#7c3aed] to-transparent opacity-0 transition-all duration-300 group-hover:opacity-100" />
