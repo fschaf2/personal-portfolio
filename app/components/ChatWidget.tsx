@@ -126,7 +126,7 @@ export default function ChatWidget() {
     } catch (error) {
       setMessages((prev) => [
         ...prev,
-        { role: "model", content: "I hit an error reaching the AI. Check the API server/key." },
+        { role: "model", content: "Sorry, an error occurred." },
       ]);
       console.error(error);
     } finally {
