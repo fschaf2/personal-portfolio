@@ -84,6 +84,7 @@ export default function HomePage() {
                 <p className="font-semibold">Python · PyTorch · Angular · React/Next · SQL</p>
               </div>
             </div>
+          </div>
 
           <div className="relative">
             <div className="absolute -inset-6 rounded-[28px] bg-gradient-to-br from-[#c7b5ff]/70 via-[#f5e7c8]/70 to-[#e6d6ff]/70 blur-2xl" />
