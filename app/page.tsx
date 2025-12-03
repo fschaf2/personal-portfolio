@@ -45,7 +45,7 @@ export default function HomePage() {
                 I'm Felix, an LSU Computer Science senior. I pair big-picture vision with detail-oriented performance: LaCulture’s statewide map and tours, BrainScan AI’s computer vision,
                  a student datastore with exports, a 99%+ MNIST lab, and much more.
               </p>
-              <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.18em] text-slate-600">
+              <div className="flex flex-wrap justify-center gap-2 text-xs uppercase tracking-[0.18em] text-slate-600">
                 <span className="rounded-full bg-white/80 px-3 py-1 ring-1 ring-purple-100">Baton Rouge</span>
                 <span className="rounded-full bg-white/80 px-3 py-1 ring-1 ring-purple-100">AI/ML + Full-Stack</span>
                 <span className="rounded-full bg-white/80 px-3 py-1 ring-1 ring-purple-100">Computer Vision · Maps · Data</span>
@@ -68,7 +68,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-4 text-sm text-slate-700">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-4 text-sm text-slate-700 justify-items-center">
               <div className="rounded-xl bg-white/90 p-4 shadow-sm ring-1 ring-purple-100">
                 <p className="text-xs text-slate-500">Right now</p>
                 <p className="font-semibold">LSU CS senior '26 · Software Engineering concentration</p>
