@@ -7,6 +7,14 @@ type ChatMessage = {
   content: string;
 };
 
+const formatMessage = (text: string) => {
+  const escaped = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  return escaped.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+};
+
 const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
 
 export default function ChatWidget() {
@@ -130,7 +138,9 @@ export default function ChatWidget() {
                       : "bg-white border border-purple-100 text-slate-800 rounded-tl-sm"
                   }`}
                 >
-                  {msg.content}
+                  <span
+                    dangerouslySetInnerHTML={{ __html: formatMessage(msg.content) }}
+                  />
                 </div>
               </div>
             ))}
