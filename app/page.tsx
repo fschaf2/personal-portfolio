@@ -204,7 +204,7 @@ export default function HomePage() {
             >
               Start a project
             </a>
-            <span className="text-slate-500">© {new Date().getFullYear()}</span>
+            <span className="text-slate-500">{new Date().getFullYear()}</span>
           </div>
         </footer>
       </div>
