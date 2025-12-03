@@ -60,49 +60,49 @@ export default function ContactPage() {
               <label className="space-y-2 text-sm font-medium text-slate-800">
                 Name
                 <input
-                  type="text"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-                  required
-                  className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
-                />
-              </label>
-              <label className="space-y-2 text-sm font-medium text-slate-800">
-                Email
-                <input
-                  type="email"
-                  placeholder="you@example.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-                  required
-                  className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
-                />
-              </label>
-            </div>
-
-            <label className="space-y-2 text-sm font-medium text-slate-800">
-              Project/Idea
-              <input
                 type="text"
-                placeholder="Your Fabulous Idea"
-                value={formData.project}
-                onChange={(e) => setFormData((prev) => ({ ...prev, project: e.target.value }))}
-                className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
-              />
-            </label>
-
-            <label className="space-y-2 text-sm font-medium text-slate-800">
-              Message
-              <textarea
-                rows={5}
-                placeholder="Enter Your Message"
-                value={formData.message}
-                onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                 required
-                className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
+                className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
               />
             </label>
+            <label className="space-y-2 text-sm font-medium text-slate-800">
+              Email
+              <input
+                type="email"
+                placeholder="you@example.com"
+                value={formData.email}
+                onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                required
+                className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
+              />
+            </label>
+          </div>
+
+          <label className="space-y-2 text-sm font-medium text-slate-800">
+            Project/Idea
+            <input
+              type="text"
+              placeholder="Your Fabulous Idea"
+              value={formData.project}
+              onChange={(e) => setFormData((prev) => ({ ...prev, project: e.target.value }))}
+              className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
+            />
+          </label>
+
+          <label className="space-y-2 text-sm font-medium text-slate-800">
+            Message
+            <textarea
+              rows={5}
+              placeholder="Enter Your Message"
+              value={formData.message}
+              onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+              required
+              className="mt-1 w-full rounded-xl border border-purple-100 bg-white/80 px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus:border-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-[#c4a5ff]"
+            />
+          </label>
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <p className="text-sm text-slate-600">
