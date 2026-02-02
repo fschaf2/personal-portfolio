@@ -5,7 +5,7 @@ AI_API_KEY = os.getenv("AI_API_KEY")
 if not AI_API_KEY:
     raise RuntimeError("AI_API_KEY environment variable is required for Gemini API access.")
 
-AI_MODEL = "gemini-3-flash"
+AI_MODEL = "gemini-3-flash-preview"
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{AI_MODEL}:generateContent?key={AI_API_KEY}"
 
 CHAT_CONTEXT = """
