@@ -13,9 +13,7 @@ const projects = [
     summary:
       "An AI model (convolutional neural net) that takes MRI images and classifies them on if certain types of tumors may be present. Includes a Grad-CAM heatmap for explainable AI.",
     tech: "Python, PyTorch, Grad-CAM, React, Next.js, Tailwind CSS",
-    github: "https://github.com/fschaf2/brainscan-ai",
-    githubLabel: "Repo currently private",
-    isPrivate: true,
+    github: "https://github.com/christixian/BrainScanAI_4444",
   },
   {
     title: "LSU Student Datastore",
