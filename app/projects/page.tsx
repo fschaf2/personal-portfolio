@@ -1,5 +1,6 @@
 interface Project {
   title: string;
+  badge: string;
   summary: string;
   tech: string;
   github: string;
