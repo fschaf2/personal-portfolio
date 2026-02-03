@@ -5,6 +5,7 @@ export default function AboutPage() {
       summary: "MRI tumor classifier with Grad-CAM overlays for explainability.",
       tech: "Python · PyTorch · React · Next.js",
       github: "https://github.com/christixian/BrainScanAI_4444",
+      isPrivate: false,
     },
     {
       title: "LaCulture",
