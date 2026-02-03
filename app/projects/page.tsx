@@ -1,4 +1,12 @@
-const projects = [
+interface Project {
+  title: string;
+  summary: string;
+  tech: string;
+  github: string;
+  isPrivate?: boolean;
+  githubLabel?: string;
+}
+const projects: Project[] = [
   {
     title: "LaCulture Louisiana Culture Website",
     badge: "Full-Stack Web Development, Database Management",
@@ -14,7 +22,6 @@ const projects = [
       "An AI model (convolutional neural net) that takes MRI images and classifies them on if certain types of tumors may be present. Includes a Grad-CAM heatmap for explainable AI.",
     tech: "Python, PyTorch, Grad-CAM, React, Next.js, Tailwind CSS",
     github: "https://github.com/christixian/BrainScanAI_4444",
-    isPrivate: false,
   },
   {
     title: "LSU Student Datastore",
