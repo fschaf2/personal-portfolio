@@ -4,9 +4,7 @@ export default function AboutPage() {
       title: "BrainScan AI",
       summary: "MRI tumor classifier with Grad-CAM overlays for explainability.",
       tech: "Python · PyTorch · React · Next.js",
-      github: "https://github.com/fschaf2/brainscan-ai",
-      githubLabel: "Repo currently private",
-      isPrivate: true,
+      github: "https://github.com/christixian/BrainScanAI_4444",
     },
     {
       title: "LaCulture",
