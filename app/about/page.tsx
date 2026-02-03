@@ -94,7 +94,7 @@ export default function AboutPage() {
                     </span>
                   </div>
                   <p className="mt-2 text-sm text-slate-700">{project.summary}</p>
-                  {project.isPrivate ? (
+                  {Boolean(project.isPrivate) ? (
                     <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#2f1b52]">
                       {project.githubLabel ?? "Repo currently private"}
                     </span>
