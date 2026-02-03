@@ -10,12 +10,12 @@ export default function HomePage() {
       github: "https://github.com/LandonW-CSC-LSU/4330_Project_LaCulture",
     },
     {
-      title: "AI Digit Classifier",
-      badge: "AI/ML, Data Analysis",
+      title: "BrainScan AI",
+      badge: "AI/ML, Full-Stack Web Development",
       summary:
-        "MNIST digit classifier exploring five AI methods, with a CNN surpassing 99% accuracy plus confusion matrices and probability maps.",
-      tech: "Python · PyTorch · Scikit-learn · Numpy",
-      github: "https://github.com/fschaf2/AIProj",
+        "MRI tumor classifier with Grad-CAM overlays for explainability.",
+      tech: "Python · PyTorch · React · Next.js",
+      github: "https://github.com/christixian/BrainScanAI_4444",
     }
   ];
 
