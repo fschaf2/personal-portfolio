@@ -1,5 +1,13 @@
 export default function AboutPage() {
-  const projects = [
+  interface Project {
+  title: string;
+  summary: string;
+  tech: string;
+  github: string;
+  isPrivate?: boolean;
+  githubLabel?: string;
+  }
+  const projects: Project[] = [
     {
       title: "BrainScan AI",
       summary: "MRI tumor classifier with Grad-CAM overlays for explainability.",
