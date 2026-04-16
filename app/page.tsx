@@ -33,11 +33,7 @@ export default function HomePage() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              Software grounded in{" "}
-              <span className="bg-gradient-to-r from-[#4c1d95] via-[#7c3aed] to-[#f6c344] bg-clip-text text-transparent">
-                bold innovation
-              </span>{" "}
-              and clean structure.
+              Software grounded in bold innovation and clean structure.
             </h2>
 
             <div className="space-y-3">
